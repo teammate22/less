@@ -1,3 +1,31 @@
+div {
+  color: red;
+}
+div p {
+  background-color: #00ffff;
+}
+div p span {
+  background-color: hsla(201, 50%, 70%, 0.7);
+}
+div div {
+  font-size: 25px;
+}
+.div1 {
+  color: royalblue;
+}
+#div2 {
+  font-weight: bold;
+}
+body {
+  background-image: url("image/img-bg.jpg");
+}
+.div3 {
+  color: gray;
+}
+#div4 {
+  font-size: 30px;
+  color: #00ffff;
+}
 .main-div {
   color: royalblue;
   font-family: sans-serif;

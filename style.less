@@ -1,3 +1,44 @@
+@bg:#ee82ee;
+@bg2:#00ffff;
+@div-cl:div1;
+@div-id:div2;
+@div-cl2:div3;
+@div-id2:div4;
+@path:"image/";
+@col:color;
+@fs:font-size;
+@val1:20px;
+@val2:10px;
+div{
+  color: red;
+  p{
+    background-color: @bg2;
+    span{
+      background-color: @bg;
+    }
+  }
+  div{
+    font-size: 25px;
+  }
+}
+.@{div-cl}{
+  color: royalblue;
+}
+#@{div-id}{
+  font-weight: bold;
+}
+body{
+  background-image: url("@{path}img-bg.jpg");
+}
+.@{div-cl2}{
+  @{col}:gray;
+}
+#@{div-id2}{
+  @{fs}:(@val1 + @val2);
+  @{col}:@bg2;
+}
+
+
 @col: color;
 @bg: hsla(201, 50%, 70%, 70%);
 @p1: 10px;

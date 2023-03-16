@@ -1,0 +1,42 @@
+@col: color;
+@bg: hsla(201, 50%, 70%, 70%);
+@p1: 10px;
+@p2: 20px;
+@pad:boolean(p1>p2);
+@replace:paentir;
+@list1: red 5px bold;
+@list:range(250px, 350px, 100px);
+@unit-fs:unit(230, get-unit(5%));
+@convert-fs:convert(20px, pt);
+@grad: rgba(252, 166, 252, 0.8) 30%, rgba(109, 109, 219, 0.762) 40%, rgba(166, 166, 52, 0.729);
+.main-div{
+  color: royalblue;
+  font-family: sans-serif;
+  font-size: @convert-fs;
+  margin: extract(@list1, 2);
+  background-color: saturate(@bg, 20%);
+  padding: if(@pad, @p1, @p2);
+  font-weight: extract(@list1, 3);
+  width: extract(@list, 1);
+  &:hover{
+    background-image: svg-gradient(to bottom right, @grad);
+    cursor: replace(@replace, 'paentir', 'pointer');
+    background-size: 100%
+  }
+}
+.second-div{
+  .main-div();
+  width: extract(@list, 2);
+  font-size: @unit-fs;
+}
+.color(@col){
+  color: @col;
+}
+.text-red{
+  .color(extract(@list1, 1));
+}
+each(range(1, 10), {
+  .height-@{value}{
+    height: (@value * 10px);
+  }
+})
